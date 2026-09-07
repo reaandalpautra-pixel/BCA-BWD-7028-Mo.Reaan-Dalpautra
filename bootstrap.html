@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Demonstration</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- 1. NAVBAR COMPONENT -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-link navbar-brand fw-bold" href="#">BootstrapDemo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cards">Cards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#accordion">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. HERO / JUMBOTRON SECTION -->
+    <section class="bg-light py-5 text-center container-fluid border-bottom" id="home">
+        <div class="container py-4">
+            <h1 class="display-4 fw-bold">Welcome to Bootstrap 5</h1>
+            <p class="lead text-muted">This page demonstrates standard Bootstrap 5 elements including grid systems, cards, forms, badges, modals, and dynamic components.</p>
+            <a href="#contact" class="btn btn-primary btn-lg m-2">Get Started</a>
+            <!-- Button triggering Modal -->
+            <button type="button" class="btn btn-outline-secondary btn-lg m-2" data-bs-toggle="modal" data-bs-target="#demoModal">
+                Launch Modal
+            </button>
+        </div>
+    </section>
+
+    <!-- 3. GRID SYSTEM & CARDS -->
+    <section class="container my-5" id="cards">
+        <h2 class="text-center mb-4">Responsive Grid & Cards</h2>
+        <div class="row g-4">
+            
+            <!-- Card 1 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">Feature</span>
+                        <h5 class="card-title">Responsive Design</h5>
+                        <p class="card-text">Bootstrap’s mobile-first flexbox grid lets you build layouts of all shapes and sizes.</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <span class="badge bg-warning text-dark mb-2">Updated</span>
+                        <h5 class="card-title">Components Galore</h5>
+                        <p class="card-text">Pre-styled UI elements like alerts, dropdowns, forms, and accordions speed up web development.</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <span class="badge bg-danger mb-2">Popular</span>
+                        <h5 class="card-title">Customizable</h5>
+                        <p class="card-text">Easily style components with utility classes or extend built-in SASS variables.</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. ACCORDION COMPONENT -->
+    <section class="container my-5" id="accordion">
+        <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        What is Bootstrap?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Bootstrap is a powerful, feature-packed frontend toolkit that helps you build fast, responsive sites quickly.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expandedHere is a complete, ready-to-use standard HTML file demonstrating common Bootstrap elements (Navbar, Hero section, Cards, Form, Accordion, and Footer) using the Bootstrap 5 CDN:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Elements Demonstration</title>
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="[https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css](https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css)" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">MyBrand</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cards">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section (Jumbotron style using Utilities) -->
+  <header id="hero" class="bg-light py-5 text-center border-bottom">
+    <div class="container py-4">
+      <h1 class="display-4 fw-bold">Welcome to Bootstrap Showcase</h1>
+      <p class="lead text-muted my-3">
+        A simple single-page demonstration featuring various essential Bootstrap 5 UI components.
+      </p>
+      <a href="#cards" class="btn btn-primary btn-lg me-2">Explore Components</a>
+      <a href="#contact" class="btn btn-outline-secondary btn-lg">Get in Touch</a>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="container my-5">
+
+    <!-- Alert Banner -->
+    <div class="alert alert-info alert-dismissible fade show" role="alert">
+      <strong>Pro Tip:</strong> Bootstrap components are fully responsive and work seamlessly across all screen sizes!
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <!-- Cards Section (Grid System) -->
+    <section id="cards" class="my-5">
+      <h2 class="text-center mb-4">Core Features</h2>
+      <div class="row g-4">
+        
+        <!-- Card 1 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title text-primary">Responsive Grid</h5>
+              <p class="card-text">Bootstrap’s powerful mobile-first flexbox grid system allows seamless alignment across devices.</p>
+              <span class="badge bg-success">Layout</span>
+            </div>
+            <div class="card-footer bg-transparent border-top-0">
+              <button class="btn btn-sm btn-outline-primary">Read More</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title text-primary">Pre-styled UI</h5>
+              <p class="card-text">Includes ready-to-use elements like buttons, badges, navigation bars, and forms out of the box.</p>
+              <span class="badge bg-warning text-dark">UI Elements</span>
+            </div>
+            <div class="card-footer bg-transparent border-top-0">
+              <button class="btn btn-sm btn-outline-primary">Read More</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title text-primary">Interactive Plugins</h5>
+              <p class="card-text">Built-in JavaScript plugins powers accordions, modals, dropdowns, and collapsible bars easily.</p>
+              <span class="badge bg-info text-dark">Interactive</span>
+            </div>
+            <div class="card-footer bg-transparent border-top-0">
+              <button class="btn btn-sm btn-outline-primary">Read More</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="my-5">
+
+    <!-- Accordion Section -->
+    <section id="faq" class="my-5">
+      <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+      <div class="accordion w-75 mx-auto" id="faqAccordion">
+        
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+              What is Bootstrap?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Bootstrap is a free and open-source front-end framework designed for faster and easier web development.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+              Is JavaScript required?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              While Bootstrap provides standard CSS styles, interactive features like toggles, dropdowns, and alerts require its JavaScript library.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="my-5">
+
+    <!-- Form Section -->
+    <section id="contact" class="my-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <h2 class="text-center mb-4">Contact Us</h2>
+          <form class="p-4 border rounded shadow-sm bg-light">
+            
+            <div class="mb-3">
+              <label for="userName" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="userName" placeholder="John Doe" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="userEmail" class="form-label">Email Address</label>
+              <input type="email" class="form-control" id="userEmail" placeholder="name@example.com" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="userMessage" class="form-label">Message</label>
+              <textarea class="form-control" id="userMessage" rows="4" placeholder="Your message here..." required></textarea>
+            </div>
+
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="newsletter">
+              <label class="form-check-label" for="newsletter">Subscribe to newsletter</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <div class="container">
+      <p class="mb-0">&copy; 2026 MyBrand. Built with Bootstrap 5.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JavaScript Bundle (Includes Popper) -->
+  <script src="[https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js](https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js)"></script>
+</body>
+</html>
