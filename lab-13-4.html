@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4 - Bootstrap Pagination</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light py-5">
+
+    <div class="container" style="max-width: 600px;">
+        <h2 class="mb-4 text-center">Bootstrap Pagination Navigation</h2>
+
+        <!-- Content Area Simulation -->
+        <div class="card shadow-sm p-4 mb-4 text-center">
+            <h4 id="page-title" class="text-primary mb-2">Displaying Page 1 Content</h4>
+            <p id="page-content" class="text-muted">
+                Welcome to the first page! Use the pagination links below to seamlessly navigate forward or backward across different pages.
+            </p>
+        </div>
+
+        <!-- Standard Pagination Component -->
+        <div class="card shadow-sm p-3 d-flex align-items-center">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination mb-0">
+                    <!-- Previous Button -->
+                    <li class="page-item disabled" id="prev-btn">
+                        <a class="page-link" href="#" onclick="changePage(-1); return false;">Previous</a>
+                    </li>
+                    
+                    <!-- Page Numbers -->
+                    <li class="page-item active" id="p1"><a class="page-link" href="#" onclick="setPage(1); return false;">1</a></li>
+                    <li class="page-item" id="p2"><a class="page-link" href="#" onclick="setPage(2); return false;">2</a></li>
+                    <li class="page-item" id="p3"><a class="page-link" href="#" onclick="setPage(3); return false;">3</a></li>
+                    
+                    <!-- Next Button -->
+                    <li class="page-item" id="next-btn">
+                        <a class="page-link" href="#" onclick="changePage(1); return false;">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- JavaScript to make navigation dynamic -->
+    <script>
+        let currentPage = 1;
+        const totalPages = 3;
+
+        const contents = {
+            1: { title: "Displaying Page 1 Content", text: "Welcome to the first page! Use the pagination links below to seamlessly navigate forward or backward across different pages." },
+            2: { title: "Displaying Page 2 Content", text: "You have arrived at page 2. This demonstrates how standard pagination handles item lists and multi-page workflow views." },
+            3: { title: "Displaying Page 3 Content", text: "This is the final page (Page 3). The Next button is now disabled to restrict further forward navigation." }
+        };
+
+        function setPage(pageNum) {
+            currentPage = pageNum;
+            updateUI();
+        }
+
+        function changePage(direction) {
+            let newPage = currentPage + direction;
+            if (newPage >= 1 && newPage <= totalPages) {
+                currentPage = newPage;
+                updateUI();
+            }
+        }
+
+        function updateUI() {
+            // Update Text Content
+            document.getElementById('page-title').innerText = contents[currentPage].title;
+            document.getElementById('page-content').innerText = contents[currentPage].text;
+
+            // Update Active Class on Page Numbers
+            for (let i = 1; i <= totalPages; i++) {
+                let item = document.getElementById('p' + i);
+                if (i === currentPage) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            }
+
+            // Update Disabled state for Previous/Next buttons
+            let prevBtn = document.getElementById('prev-btn');
+            let nextBtn = document.getElementById('next-btn');
+
+            if (currentPage === 1) {
+                prevBtn.classList.add('disabled');
+            } else {
+                prevBtn.classList.remove('disabled');
+            }
+
+            if (currentPage === totalPages) {
+                nextBtn.classList.add('disabled');
+            } else {
+                nextBtn.classList.remove('disabled');
+            }
+        }
+    </script>
+
+</body>
+</html>
