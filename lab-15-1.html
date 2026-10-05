@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Opacity Effect - CSS</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f2f5;
+            margin: 0;
+        }
+
+        .hover-image {
+            width: 3000px;
+            height: auto;
+            border-radius: 10px;
+            opacity: 1;                 
+            transition: opacity 0.3s ease;  
+            cursor: pointer;
+        }
+
+
+        .hover-image:hover {
+            opacity: 0.4;                 
+        }
+    </style>
+</head>
+<body>
+
+    <img class="hover-image" src="https://picsum.photos/400/300" alt="Sample Image">
+
+</body>
+</html> 
