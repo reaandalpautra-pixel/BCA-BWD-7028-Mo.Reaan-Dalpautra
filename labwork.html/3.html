@@ -1,0 +1,42 @@
+<!--write a javascript program to check multiple condition for a number which is either even or odd, entered number is prime or not-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>odd or even </title>
+</head>
+<body>
+    <script>
+            
+            let num = parseInt(prompt("Enter a number: "));
+    
+            // Check if the number is even or odd
+            if (num % 2 === 0) {
+                alert(num + " is an even number.");
+            } else {
+                alert(num + " is an odd number.");
+            }
+    
+            // Check if the number is prime
+            let isPrime = true;
+            if (num <= 1) {
+                isPrime = false;
+            } else {
+                for (let i = 2; i <= Math.sqrt(num); i++) {
+                    if (num % i === 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+            }
+    
+            if (isPrime) {
+                alert(num + " is a prime number.");
+            } else {
+                alert(num + " is not a prime number.");
+            }
+    </script>
+</body>
+</html>
